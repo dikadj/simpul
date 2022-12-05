@@ -446,6 +446,10 @@ const SpouseBiodata = ({ className }) => {
   const [isPriorSpouseCitizenSinceBirth, setIsPriorSpouseCitizenSinceBirth] = useState(false)
   const [isPriorSpouseLPR, setIsPriorSpouseLPR] = useState(true)
   const [priorMarriageEndBy, setPriorMarriageEndBy] = useState("divorced")
+  const [priorSpouseAnnuled, setPriorSpouseAnnuled] = useState(false)
+  const [priorSpouseDivorced, setPriorSpouseDivorced] = useState(false)
+  const [priorSpouseDeceased, setPriorSpouseDeceased] = useState(false)
+  const [priorSpouseMarriageEndOther, setPriorSpouseMarriageEndOther] = useState(false)
 
   
   const handleCurrentSpouseFirstName = (e) => { setCurrentSpouseFirstName(e.target.value) }
@@ -466,6 +470,11 @@ const SpouseBiodata = ({ className }) => {
   const handlePriorSpouseMiddleName = (e) => { setPriorSpouseMiddleName(e.target.value) }
   const handlePriorSpouseLastName = (e) => { setPriorSpouseLastName(e.target.value) }
   const handleCurrentSpouseMarriageAddressState = (e) => { setCurrentSpouseMarriageAddressState(e.target.value) }
+  const handlePriorSpouseAnnuled = (e) => { setPriorSpouseAnnuled(e.target.value) }
+  const handlePriorSpouseDivorced = (e) => { setPriorSpouseDivorced(e.target.value) }
+  const handlePriorSpouseDeceased = (e) => { setPriorSpouseDeceased(e.target.value) }
+  const handlePriorSpouseMarriageEndOther = (e) => { setPriorSpouseMarriageEndOther(e.target.value) }
+  const handlePriorSpouseOther = (e) => { setPriorSpouseOther(e.target.value) }
   const handleSelectedBirthdayDate = () => { setSelectedBirthdayDate(selectedBirthdayDate) }
   const handleFaxInput = (e) => { setFaxValue(e.target.value) }
   const handlePhoneValue = (e) => { 
@@ -922,7 +931,7 @@ const SpouseBiodata = ({ className }) => {
                 <label className="" htmlFor="inputPriorSpouseBirthday">Your Prior Spouse's Date of Birth</label>
                 <div className="row">
                   <div className="col-4">
-                    <input className="form-control" type="date" id="inputPriorSpouseBirthday" />
+                    <input className="form-control" type="date" id="inputPriorSpouseBirthday" name="prior_spouse_date_of_birth" />
                   </div>
                 </div>
               </div>
@@ -930,13 +939,13 @@ const SpouseBiodata = ({ className }) => {
                 <label className="" htmlFor="inputPriorSpouseMarriageDuration">Your Prior Marriage Duration</label>
                 <div className="row">
                   <div className="col-4">
-                    <input className="form-control" type="date" id="inputPriorSpouseMarriageDateStart" />
+                    <input className="form-control" type="date" id="inputPriorSpouseMarriageDateStart" name="prior_spouse_date_of_marriage" />
                   </div>
                   <div className="col-1 d-flex justify-content-center pt-2">
                     <span>to</span>
                   </div>
                   <div className="col-4">
-                    <input className="form-control" type="date" id="inputPriorSpouseMarriageDateEnd" />
+                    <input className="form-control" type="date" id="inputPriorSpouseMarriageDateEnd" name="prior_spouse_end_date_of_marriage" />
                   </div>
                 </div>
               </div>
@@ -955,23 +964,27 @@ const SpouseBiodata = ({ className }) => {
                 <label>Your Prior Marriage End By</label>
                 <div className="d-flex" onChange={handlePriorMarriageEndBy}>
                   <div className="form-check mr-3">
-                    <input id="priorMarriageAnnuled" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="annuled" />
+                    <input id="priorMarriageAnnuled" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="annuled" onChange={handlePriorSpouseAnnuled} />
+                    <input type="hidden" className="form-check-input" name="prior_spouse_annuled" value={priorSpouseAnnuled} />
                     <label htmlFor="priorMarriageAnnuled" className="form-check-label">Annulment</label>
                   </div>
                   <div className="form-check mr-3">
-                    <input id="priorMarriageDivorced" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="divorced" />
+                    <input id="priorMarriageDivorced" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="divorced" onChange={handlePriorSpouseDivorced} />
+                    <input type="hidden" className="form-check-input" name="prior_spouse_divorced" value={priorSpouseDivorced} />
                     <label htmlFor="priorMarriageDivorced" className="form-check-label">Divorce</label>
                   </div>
                   <div className="form-check mr-3">
-                    <input id="priorMarriageDeceased" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="deceased" />
+                    <input id="priorMarriageDeceased" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="deceased" onChange={handlePriorSpouseDeceased} />
+                    <input type="hidden" className="form-check-input" name="prior_spouse_deceased" value={priorSpouseDeceased} onChange={handlePriorSpouseDeceased} />
                     <label htmlFor="priorMarriageDeceased" className="form-check-label">Widowed</label>
                   </div>
                   <div className="form-check mr-3">
                     <input id="priorMarriageOther" type="radio" className="form-check-input" name="prior_spouse_marriage_end_by" value="other" />
+                    <input type="hidden" className="form-check-input" name="" value={priorSpouseMarriageEndOther} onChange={handlePriorSpouseMarriageEndOther} />
                     <label htmlFor="priorMarriageOther" className="form-check-label">Other</label>
                   </div>
                   <div className={`${priorMarriageEndBy !== "other" ? "d-none" : ""}`}>
-                    <input className="form-control" type="text" placeholder="Specify..." />
+                    <input name="prior_spouse_marriage_end_other" className="form-control" type="text" placeholder="Specify..." />
                   </div>
                 </div>
               </div>
