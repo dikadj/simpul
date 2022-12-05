@@ -9,10 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "admin-lte": "^3.2",
+    "axios": "^1.2.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
+    "jquery": "^3.6.1",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-calendar": "^4.0.0",
+    "react-date-picker": "^9.1.0",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "18.2.0",
+    "react-select": "^5.6.1"
   }
 }

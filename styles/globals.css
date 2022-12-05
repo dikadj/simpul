@@ -24,3 +24,9 @@ a {
     background: black;
   }
 }
+
+/* Datepicker */
+
+.react-datepicker__triangle {
+  transform: translate(24px, 0px)!important;
+}
