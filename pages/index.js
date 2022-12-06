@@ -561,22 +561,22 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="col-12">
-               <NameFields label="Current Spouse's Name" firstNameId="currentSpouseFirstName" middleNameId="currentSpouseMiddleName" lastNameId="currentSpouseLastName" handleFirstName={handleCurrentSpouseFirstName} handleMiddleName={handleCurrentSpouseMiddleName} handleLastName={handleCurrentSpouseLastName} firstName={currentSpouseFirstName} middleName={currentSpouseMiddleName} lastName={currentSpouseLastName}>
+               <NameFields label="Current Spouse&apos;s Name" firstNameId="currentSpouseFirstName" middleNameId="currentSpouseMiddleName" lastNameId="currentSpouseLastName" handleFirstName={handleCurrentSpouseFirstName} handleMiddleName={handleCurrentSpouseMiddleName} handleLastName={handleCurrentSpouseLastName} firstName={currentSpouseFirstName} middleName={currentSpouseMiddleName} lastName={currentSpouseLastName}>
                   <CheckboxItem className="col-6" id="currentSpouseHasNoPrevName" label="He/she has NO prior name" onChange={handleCurrentSpouseHasNoPrevName} />
                   <CheckboxItem className="col-6" id="currentSpouseHasAnotherName" label="He/she has another name" onChange={handleCurrentSpouseHasAnotherName} />
                 </NameFields>
               </div>
               <div className="col-12" id="currentSpousePrevName">
-                <NameFields label="Current Spouse's Previous Name" firstNameId="currentSpousePreviousFirstName" middleNameId="currentSpousePreviousMiddleName" lastNameId="currentSpousePreviousLastName" handleFirstName={handleCurrentSpousePreviousFirstName} handleMiddleName={handleCurrentSpousePreviousMiddleName} handleLastName={handleCurrentSpousePreviousLastName} firstName={currentSpousePreviousFirstName} middleName={currentSpousePreviousMiddleName} lastName={currentSpousePreviousLastName} />
+                <NameFields label="Current Spouse&apos;s Previous Name" firstNameId="currentSpousePreviousFirstName" middleNameId="currentSpousePreviousMiddleName" lastNameId="currentSpousePreviousLastName" handleFirstName={handleCurrentSpousePreviousFirstName} handleMiddleName={handleCurrentSpousePreviousMiddleName} handleLastName={handleCurrentSpousePreviousLastName} firstName={currentSpousePreviousFirstName} middleName={currentSpousePreviousMiddleName} lastName={currentSpousePreviousLastName} />
               </div>
               <div className="col-12 d-none" id="currentSpouseAnotherName">
-              <NameFields label="Current Spouse's Other Name" firstNameId="currentSpouseOtherFirstName" middleNameId="currentSpouseOtherMiddleName" lastNameId="currentSpouseOtherLastName" handleFirstName={handleCurrentSpouseOtherFirstName} handleMiddleName={handleCurrentSpouseOtherMiddleName} handleLastName={handleCurrentSpouseOtherLastName} firstName={currentSpouseOtherFirstName} middleName={currentSpouseOtherMiddleName} lastName={currentSpouseOtherLastName} />
+              <NameFields label="Current Spouse&apos;s Other Name" firstNameId="currentSpouseOtherFirstName" middleNameId="currentSpouseOtherMiddleName" lastNameId="currentSpouseOtherLastName" handleFirstName={handleCurrentSpouseOtherFirstName} handleMiddleName={handleCurrentSpouseOtherMiddleName} handleLastName={handleCurrentSpouseOtherLastName} firstName={currentSpouseOtherFirstName} middleName={currentSpouseOtherMiddleName} lastName={currentSpouseOtherLastName} />
               </div>
             </div>
             <div className="form-group">
               <div className="row">
                 <div className="col-6">
-                  <label className="" htmlFor="inputCurrentSpouseBirthday">Current Spouse's Date of Birth</label>
+                  <label className="" htmlFor="inputCurrentSpouseBirthday">Current Spouse&apos;s Date of Birth</label>
                   <input className="form-control" type="date" id="inputCurrentSpouseBirthday" name="current_spouse_date_of_birth" />
                 </div>
                 <div className="col-6">
@@ -588,7 +588,7 @@ const SpouseBiodata = ({ className }) => {
             <div className="form-group">
               <div className="row" id="">
                 <div className="col-12">
-                  <label htmlFor="">Current Spouse's Address</label>
+                  <label htmlFor="">Current Spouse&apos;s Address</label>
                 </div>
                 <div className="col-12 pb-3">
                   <input type="street" className="form-control" placeholder="Street Address" name="current_spouse_address_street" />
@@ -616,7 +616,7 @@ const SpouseBiodata = ({ className }) => {
               </div>
             </div>
             <div className="form-group">
-              <label>Current Spouse's Employer</label>
+              <label>Current Spouse&apos;s Employer</label>
               <input className="form-control" type="name" placeholder="Employer Name" name="current_spouse_employer" />
             </div>
             <div>
@@ -637,7 +637,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
                 <div className="col-12">
                   <div id="currentSpouseCountryOfCitizenship" className={`form-group ${isCurrentSpouseCitizenOfUS ? "d-none" : ""}`}>
-                    <Select name="current_spouse_country_of_citizenship" options={countryNames} isClearable={true} placeholder="Current Spouse's Country of Citizenship" />
+                    <Select name="current_spouse_country_of_citizenship" options={countryNames} isClearable={true} placeholder="Current Spouse&apos;s Country of Citizenship" />
                     <CheckboxItem className="" id="isCurrentSpouseCitizenSinceBirth" label="Since birth" checked={isCurrentSpouseCitizenSinceBirth} onChange={handleIsCurrentSpouseCitizenSinceBirth} />
                   </div>
                 </div>
@@ -646,7 +646,7 @@ const SpouseBiodata = ({ className }) => {
             <div className={`form-group ${!(isCurrentSpouseCitizenOfUS && !isCurrentSpouseCitizenOfUSSinceBirth) ? "d-none" : ""}`}>
               <div className="row">
                 <div className="col-12">
-                  <label>Current Spouse's Date Became Citizen of US</label>
+                  <label>Current Spouse&apos;s Date Became Citizen of US</label>
                 </div>
                 <div className="col-4">
                   <input className="form-control" type="date" name="current_spouse_date_became_citizen" />
@@ -665,7 +665,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="form-group">
-                <label>Current Spouse's A-Number (Alien Registration Number)</label>
+                <label>Current Spouse&apos;s A-Number (Alien Registration Number)</label>
                 <div className="row">
                   <div className="input-group col-6">
                     <div className="input-group-prepend"><span className="input-group-text">A0</span></div>
@@ -685,7 +685,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className={`form-group ${isCurrentSpouseLPR ? "d-none" : ""}`}>
-                <label htmlFor="currentSpouseImmigrationStatus">Current Spouse's Immigration Status</label>
+                <label htmlFor="currentSpouseImmigrationStatus">Current Spouse&apos;s Immigration Status</label>
                 <div className="row">
                   <div className="col-6">
                     <input id="currentSpouseImmigrationStatus" className="form-control" type="text" name="current_spouse_immigration_status_other" placeholder="e.g. Non-Immigrants" />
@@ -694,7 +694,7 @@ const SpouseBiodata = ({ className }) => {
               </div>
             </div>
             <div className="form-group">
-              <label>Current Spouse's Marriage Location</label>
+              <label>Current Spouse&apos;s Marriage Location</label>
                 <div className="row">
                   <div className="col-4 pb-3">
                     <input type="city" className="form-control" placeholder="City" name="current_spouse_marriage_address_city" />
@@ -717,9 +717,9 @@ const SpouseBiodata = ({ className }) => {
               </div>
             </div>
             <div className={currentSpouseTimesMarried > 1 ? "" : "d-none"}>
-              <NameFields label="Current Spouse's Previous Spouse's Name" firstNameId="currentSpousePriorSpouseFirstName" middleNameId="currentSpousePriorSpouseMiddleName" lastNameId="currentSpousePriorSpouseLastName" handleFirstName={handleCurrentSpousePriorSpouseFirstName} handleMiddleName={handleCurrentSpousePriorSpouseMiddleName} handleLastName={handleCurrentSpousePriorSpouseLastName} firstName={currentSpousePriorSpouseFirstName} middleName={currentSpousePriorSpouseMiddleName} lastName={currentSpousePriorSpouseLastName} />
+              <NameFields label="Current Spouse&apos;s Previous Spouse&apos;s Name" firstNameId="currentSpousePriorSpouseFirstName" middleNameId="currentSpousePriorSpouseMiddleName" lastNameId="currentSpousePriorSpouseLastName" handleFirstName={handleCurrentSpousePriorSpouseFirstName} handleMiddleName={handleCurrentSpousePriorSpouseMiddleName} handleLastName={handleCurrentSpousePriorSpouseLastName} firstName={currentSpousePriorSpouseFirstName} middleName={currentSpousePriorSpouseMiddleName} lastName={currentSpousePriorSpouseLastName} />
               <div>
-                <label>Is current spouse's prior spouse a citizen of United States?</label>
+                <label>Is current spouse&apos;s prior spouse a citizen of United States?</label>
                 <div className="row">
                   <div className="col-6 form-group" id="isCurrentSpousePriorSpouseCitizenOfUS" onChange={handleIsCurrentSpousePriorSpouseCitizenOfUS}>
                     <div className="form-check">
@@ -736,7 +736,7 @@ const SpouseBiodata = ({ className }) => {
                   </div>
                   <div className="col-12">
                     <div id="currentSpousePriorSpouseCountryOfCitizenship" className={`form-group ${isCurrentSpousePriorSpouseCitizenOfUS ? "d-none" : ""}`}>
-                      <Select name="current_spouse_prior_spouse_country_of_citizenship" options={countryNames} isClearable={true} placeholder="Current Spouse's Country of Citizenship" />
+                      <Select name="current_spouse_prior_spouse_country_of_citizenship" options={countryNames} isClearable={true} placeholder="Current Spouse&apos;s Country of Citizenship" />
                       <CheckboxItem className="" id="isCurrentSpousePriorSpouseCitizenSinceBirth" label="Since birth" checked={isCurrentSpousePriorSpouseCitizenSinceBirth} onChange={handleIsCurrentSpousePriorSpouseCitizenSinceBirth} />
                     </div>
                   </div>
@@ -745,7 +745,7 @@ const SpouseBiodata = ({ className }) => {
               <div className={`form-group ${!(isCurrentSpousePriorSpouseCitizenOfUS && !isCurrentSpousePriorSpouseCitizenOfUSSinceBirth) ? "d-none" : ""}`}>
                 <div className="row">
                   <div className="col-12">
-                    <label>Current Spouse's Prior Spouse's Date Became Citizen of US</label>
+                    <label>Current Spouse&apos;s Prior Spouse&apos;s Date Became Citizen of US</label>
                   </div>
                   <div className="col-4">
                     <input className="form-control" type="date" />
@@ -763,7 +763,7 @@ const SpouseBiodata = ({ className }) => {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label>Current Spouse's Prior Spouse's A-Number (Alien Registration Number)</label>
+                    <label>Current Spouse&apos;s Prior Spouse&apos;s A-Number (Alien Registration Number)</label>
                     <div className="row">
                       <div className="input-group col-6">
                         <div className="input-group-prepend"><span className="input-group-text">A0</span></div>
@@ -772,7 +772,7 @@ const SpouseBiodata = ({ className }) => {
                     </div>
                   </div>
                   <div className="form-group" onChange={handleIsCurrentSpousePriorSpouseLPR}>
-                    <label>Is current spouse's prior spouse a Lawful Permanent Resident of US?</label>
+                    <label>Is current spouse&apos;s prior spouse a Lawful Permanent Resident of US?</label>
                     <div className="form-check">
                       <input id="currentSpousePriorSpouseIsLPR" className="form-check-input" type="radio" name="current_spouse_prior_spouse_lawful_permanent_resident" value={true} />
                       <label htmlFor="currentSpousePriorSpouseIsLPR" className="form-check-label">Yes</label>
@@ -783,7 +783,7 @@ const SpouseBiodata = ({ className }) => {
                     </div>
                   </div>
                   <div className={`form-group ${isCurrentSpousePriorSpouseLPR ? "d-none" : ""}`}>
-                    <label htmlFor="currentSpousePriorSpouseImmigrationStatus">Current Spouse's Immigration Status</label>
+                    <label htmlFor="currentSpousePriorSpouseImmigrationStatus">Current Spouse&apos;s Immigration Status</label>
                     <div className="row">
                       <div className="col-6">
                         <input id="currentSpousePriorSpouseImmigrationStatus" className="form-control" type="text" name="current_spouse_prior_spouse_immigration_status_other" placeholder="e.g. Non-Immigrants" />
@@ -793,7 +793,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="form-group">
-                <label className="" htmlFor="inputCurrentSpousePriorSpouseBirthday">Current Spouse's Prior Spouse's Date of Birth</label>
+                <label className="" htmlFor="inputCurrentSpousePriorSpouseBirthday">Current Spouse&apos;s Prior Spouse&apos;s Date of Birth</label>
                 <div className="row">
                   <div className="col-4">
                     <input className="form-control" type="date" id="inputCurrentSpousePriorSpouseBirthday" name="current_spouse_prior_spouse_date_of_birth" />
@@ -801,7 +801,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="form-group">
-                <label className="" htmlFor="inputCurrentSpousePriorSpouseMarriageDuration">Current Spouse's Prior Marriage Duration</label>
+                <label className="" htmlFor="inputCurrentSpousePriorSpouseMarriageDuration">Current Spouse&apos;s Prior Marriage Duration</label>
                 <div className="row">
                   <div className="col-4">
                     <input className="form-control" type="date" id="inputCurrentSpousePriorSpouseMarriageDateStart" name="current_spouse_prior_spouse_date_of_marriage" />
@@ -816,7 +816,7 @@ const SpouseBiodata = ({ className }) => {
               </div>
               <div className="row">
                 <div className="col-12">
-                  <label>Current Spouse's Country</label>
+                  <label>Current Spouse&apos;s Country</label>
                 </div>
                 <div className="col-6 mb-3">
                   <Select name="current_spouse_prior_spouse_country_of_birth" options={countryNames} isClearable={true} placeholder="Country of Birth" />
@@ -826,7 +826,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="form-group">
-                <label>Current Spouse's Prior Marriage End By</label>
+                <label>Current Spouse&apos;s Prior Marriage End By</label>
                 <div className="d-flex" onChange={handleCurrentSpousePriorMarriageEndBy}>
                   <div className="form-check mr-3">
                     <input id="currentSpousePriorMarriageAnnuled" type="radio" className="form-check-input" name="current_spouse_prior_spouse_marriage_end_by" value="annuled" />
@@ -852,7 +852,7 @@ const SpouseBiodata = ({ className }) => {
 {/* ================================================ */}
             </div>
             <div className={timesMarried > 1 ? "" : "d-none"}>
-              <NameFields label="Prior Spouse's Name" firstNameId="priorSpouseFirstName" middleNameId="priorSpouseMiddleName" lastNameId="priorSpouseLastName" handleFirstName={handlePriorSpouseFirstName} handleMiddleName={handlePriorSpouseMiddleName} handleLastName={handlePriorSpouseLastName} firstName={priorSpouseFirstName} middleName={priorSpouseMiddleName} lastName={priorSpouseLastName} />
+              <NameFields label="Prior Spouse&apos;s Name" firstNameId="priorSpouseFirstName" middleNameId="priorSpouseMiddleName" lastNameId="priorSpouseLastName" handleFirstName={handlePriorSpouseFirstName} handleMiddleName={handlePriorSpouseMiddleName} handleLastName={handlePriorSpouseLastName} firstName={priorSpouseFirstName} middleName={priorSpouseMiddleName} lastName={priorSpouseLastName} />
               <div>
                 <label>Is your prior spouse a citizen of United States?</label>
                 <div className="row">
@@ -880,7 +880,7 @@ const SpouseBiodata = ({ className }) => {
               <div className={`form-group ${!(isPriorSpouseCitizenOfUS && !isPriorSpouseCitizenOfUSSinceBirth) ? "d-none" : ""}`}>
                 <div className="row">
                   <div className="col-12">
-                    <label>Your Prior Spouse's Date Became Citizen of US</label>
+                    <label>Your Prior Spouse&apos;s Date Became Citizen of US</label>
                   </div>
                   <div className="col-4">
                     <input className="form-control" type="date" />
@@ -898,7 +898,7 @@ const SpouseBiodata = ({ className }) => {
                     </div>
                   </div>
                   <div className="form-group">
-                    <label>Your Prior Spouse's A-Number (Alien Registration Number)</label>
+                    <label>Your Prior Spouse&apos;s A-Number (Alien Registration Number)</label>
                     <div className="row">
                       <div className="input-group col-6">
                         <div className="input-group-prepend"><span className="input-group-text">A0</span></div>
@@ -928,7 +928,7 @@ const SpouseBiodata = ({ className }) => {
                 </div>
               </div>
               <div className="form-group">
-                <label className="" htmlFor="inputPriorSpouseBirthday">Your Prior Spouse's Date of Birth</label>
+                <label className="" htmlFor="inputPriorSpouseBirthday">Your Prior Spouse&apos;s Date of Birth</label>
                 <div className="row">
                   <div className="col-4">
                     <input className="form-control" type="date" id="inputPriorSpouseBirthday" name="prior_spouse_date_of_birth" />
@@ -951,7 +951,7 @@ const SpouseBiodata = ({ className }) => {
               </div>
               <div className="row">
                 <div className="col-12">
-                  <label>Your Prior Spouse's Country</label>
+                  <label>Your Prior Spouse&apos;s Country</label>
                 </div>
                 <div className="col-6 mb-3">
                   <Select name="prior_spouse_country_of_birth" options={countryNames} isClearable={true} placeholder="Country of Birth" />
